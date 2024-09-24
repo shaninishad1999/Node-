@@ -1,0 +1,3 @@
+npm install express
+npm install
+npx nodemon index.js -->for run on terminal
