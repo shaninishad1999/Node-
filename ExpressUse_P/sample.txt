@@ -1,3 +1,12 @@
+nodemon installaltion
+npm install  i -g nodemon
+
+
+
+for work with localhost without referess
+npm init
 npm install express
+
+
 npm install
 npx nodemon index.js -->for run on terminal
