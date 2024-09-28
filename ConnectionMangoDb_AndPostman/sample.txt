@@ -1,0 +1,8 @@
+npm init
+npm install express
+npm install mongoose
+npm install -g nodemon
+
+
+run command
+npx run nodemon index.js

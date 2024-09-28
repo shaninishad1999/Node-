@@ -1,0 +1,8 @@
+node -v  check for version of node js
+npm init
+npm install express
+npm install -g nodemon
+
+
+run command
+npx run nodemon index.js

@@ -1,12 +1,12 @@
 nodemon installaltion
 npm install  i -g nodemon
 
-
-
-for work with localhost without referess
+node -v  check for version of node js
 npm init
 npm install express
+npm install mongoose
+npm install -g nodemon
 
 
-npm install
-npx nodemon index.js -->for run on terminal
+run command
+npx run nodemon index.js
