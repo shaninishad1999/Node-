@@ -5,4 +5,4 @@ npm install -g nodemon
 
 
 run command
-npx run nodemon index.js
+npx  nodemon index.js

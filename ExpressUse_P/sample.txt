@@ -4,9 +4,8 @@ npm install  i -g nodemon
 node -v  check for version of node js
 npm init
 npm install express
-npm install mongoose
 npm install -g nodemon
 
 
 run command
-npx run nodemon index.js
+npx nodemon index.js
