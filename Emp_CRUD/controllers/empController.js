@@ -3,12 +3,13 @@ const empModel = require("../models/empModel")
 
 
 const empInsert = (req, res) => {
-    const { empNo, empName, empAge, empSalary, empPosition } = req.body;
+    const { empNo, empName, empAge,empCity, empSalary, empPosition } = req.body;
 
     const employee = new empModel({
         empNo: empNo,
         empName: empName,
         empAge: empAge,
+        empCity:empCity,
         empSalary: empSalary,
         empPosition: empPosition
     })
@@ -27,12 +28,33 @@ const empSearch = async (req, res) => {
     res.send(storeSearch)
 }
 
-const empNameAndAgebySerach = async (req, res) => {
-    const { empName, empAge } = req.body
-    const storeempNameAndAgebySerach = await empModel.find({ $and: [{ "empName": empName }, { "empAge": empAge }] })
-    res.send(storeempNameAndAgebySerach)
+const empNameAndCitybySerach = async (req, res) => {
+    const { empName, empCity } = req.body
+    const storeempNameAndCitybySerach = await empModel.find({ $and: [{ "empName": empName }, { "empCity": empCity }] })
+    res.send(storeempNameAndCitybySerach)
+}
+
+const empSearchByQuery = async (req, res) => {
+    const { empName, empCity } = req.query;
+    const queryData =  await empModel.find({ $and: [{ "empName": empName }, { "empCity": empCity }] })
+    res.send(queryData);
+    console.log(queryData);
+}
+
+const empSaveCreate = async (req, res) => {
+    const {
+        empNo, empName, empAge,empCity, empSalary, empPosition } = req.body
+    const MyData = empModel.create({
+        empNo: empNo,
+        empName: empName,
+        empAge: empAge,
+        empCity:empCity,
+        empSalary: empSalary,
+        empPosition: empPosition
+    })
+    res.send("data send by created method")
 }
 
 module.exports = {
-    empInsert, empDisplay, empSearch, empNameAndAgebySerach
+    empInsert, empDisplay, empSearch, empNameAndCitybySerach , empSearchByQuery, empSaveCreate
 }

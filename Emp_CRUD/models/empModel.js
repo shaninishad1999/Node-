@@ -4,6 +4,7 @@ const empSchema=new mongoose.Schema({
     empNo:Number,
     empName:String,
     empAge:Number,
+    empCity:String,
     empSalary:Number,
     empPosition:String
 })
