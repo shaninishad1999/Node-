@@ -1,0 +1,26 @@
+node -v  check for version of node js
+npm init
+npm install express
+npm install mongoose
+npm install -g nodemon
+npm install body-parser
+
+run command
+npx  nodemon index.js
+
+use import keyword for import  
+after license add
+"type":module
+
+{
+  "name": "importcrud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+   "type": "module"
+}
