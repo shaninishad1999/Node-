@@ -1,0 +1,11 @@
+Installation guide  (import method)
+node -v  check for version of node js
+npm init
+npm install express
+npm install -g nodemon
+for envirmental varable instalation
+npm i dotenv
+
+run command	
+npx  nodemon index.js
+
